@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #060912;
+    --bg-surface: #0d1220;
+    --bg-card: #111827;
+    --bg-hover: #1a2235;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-bright: rgba(255, 255, 255, 0.15);
+
+    --accent-blue: #2563eb;
+    --accent-blue-light: #3b82f6;
+    --accent-green: #10b981;
+    --accent-green-light: #34d399;
+    --accent-red: #ef4444;
+    --accent-amber: #f59e0b;
+    --accent-purple: #8b5cf6;
+
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #475569;
+
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --radius: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --sidebar-width: 260px;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  /* Dynamic Responsive Navigation Panel & Component Styling */
+  .fin-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fin-card:hover {
+    border-color: var(--border-bright);
+    background-color: var(--bg-hover);
+    transform: translateY(-1px);
+  }
+
+  /* Form handling interactive styling */
+  .fin-input {
+    background-color: var(--bg-base);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    border-radius: calc(var(--radius) - 2px);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .fin-input:focus {
+    border-color: var(--accent-blue-light);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+    outline: none;
+  }
+}
