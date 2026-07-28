@@ -1,0 +1,15 @@
+fastapi
+
+uvicorn
+
+sqlalchemy
+
+python-jose
+
+werkzeug
+
+python-dotenv
+
+psycopg2-binary
+
+google-generativeai

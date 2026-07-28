@@ -1,0 +1,21 @@
+title: FinAI
+theme: jekyll-theme-primer
+
+# Exclude folders/files Jekyll should not process
+exclude:
+  - node_modules
+  - frontend/node_modules
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - yarn.lock
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
